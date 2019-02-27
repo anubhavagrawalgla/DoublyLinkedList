@@ -1,5 +1,5 @@
 public class DoublyLinkedList {
-    private static class Node{
+    private static class Node {
         private int data;
         private Node pre;
         private Node next;
@@ -9,7 +9,8 @@ public class DoublyLinkedList {
             this.pre = pre;
             this.next = next;
         }
-        public Node(int data){
+
+        public Node(int data) {
             this.data = data;
             this.pre = null;
             this.next = null;
@@ -17,6 +18,7 @@ public class DoublyLinkedList {
 
 
     }
+
     private int size = 0;
     private Node head = null;
     private Node tail = null;
@@ -24,5 +26,13 @@ public class DoublyLinkedList {
     public static void main(String[] args) {
         DoublyLinkedList linkedList = new DoublyLinkedList();
         System.out.println(linkedList);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder response = new StringBuilder();
+        response.append("[");
+        response.append("]");
+        return response.toString();
     }
 }
