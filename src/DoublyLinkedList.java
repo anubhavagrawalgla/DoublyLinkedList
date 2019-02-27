@@ -40,4 +40,7 @@ public class DoublyLinkedList {
         response.append("]");
         return response.toString();
     }
+    public void insert(int data){
+
+    }
 }
