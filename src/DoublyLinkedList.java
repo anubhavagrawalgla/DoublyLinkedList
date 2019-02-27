@@ -31,6 +31,11 @@ public class DoublyLinkedList {
 
         }
         System.out.println(linkedList);
+        for (int i = 0; i < 5; i++) {
+            linkedList.insert(i + 1);
+
+        }
+        System.out.println(linkedList);
     }
 
     @Override
@@ -59,13 +64,22 @@ public class DoublyLinkedList {
     }
 
     private void insertAfter(int data, Node node) {
-        Node newNode = new Node (data, node, node.next);
+        Node newNode = new Node(data, node, node.next);
         node.next = newNode;
         newNode.next.pre = newNode;
         size++;
 
     }
-    public void insert(int data){
-        if
+
+    public void insert(int data) {
+        if (head == null) {
+            insertHead(data);
+        } else {
+            Node temp = this.head;
+            while (temp != null) {
+                temp = temp.next;
+            }
+            insertAfter(data, temp);
+        }
     }
 }
