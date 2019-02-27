@@ -51,9 +51,13 @@ public class DoublyLinkedList {
     }
 
     public void insertHead(int data) {
-        Node newNode = new Node(data, null,this.head);
-        this.head = newNode;
+        /*Node newNode = new Node(data, null,this.head);
+        this.head = newNode;*/
+        this.head = new Node(data,null, this.head){}
         size++;
+
+    }
+    private void insertAfter(int data,Node node){
 
     }
 }
